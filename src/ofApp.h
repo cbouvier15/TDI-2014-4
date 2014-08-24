@@ -26,4 +26,8 @@ class ofApp : public ofBaseApp{
         int camHeight,camWidth,snapCounter;
     
         ofImage imgToSave;
+    
+        ofSoundPlayer  snapShotSound;
+    
+        ofTrueTypeFont	font;
 };
