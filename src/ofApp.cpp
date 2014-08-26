@@ -30,6 +30,8 @@ void ofApp::setup(){
 	font.loadFont("castaway.ttf", 32);
     
     img.allocate(320, 240, OF_IMAGE_COLOR);
+    
+    glitch.loadImage("glitch.jpg");
 }
 
 //--------------------------------------------------------------
@@ -54,33 +56,39 @@ void ofApp::draw(){
         snapshot = false;
 		cout << "Snapshot " + ofToString(snapCounter)<< endl;
         
+        // Obtengo frame actual
         unsigned char* bytes = new unsigned char[camWidth*camHeight*3];
         bytes = vidGrabber.getPixels();
         
+        // Construyo la imagen limpia para mostrar la captura.
         imgToSave.setFromPixels(bytes,camWidth, camHeight, OF_IMAGE_COLOR);
         
+        // Construyo la imagen con glitch.
         img.setFromPixels(bytes,camWidth, camHeight, OF_IMAGE_COLOR);
         
         int i = 0;
-        while ( i < 10000 ) {
-            int pos = ofRandom(3*img.getPixelsRef().size()/6,5*img.getPixelsRef().size()/6);
+        while ( i < 1000 ) {
             
-            cout << pos << endl;
-            
+            int pos = ofRandom(76000,150000);
             float color = abs(sin( float(pos) / 18.f)) * 255.f;
-            img.getPixelsRef()[pos] = color;
-            img.getPixelsRef()[pos+1] = color;
-            img.getPixelsRef()[pos+2] = color;
-            img.getPixelsRef()[pos+3] = color;
-            img.getPixelsRef()[pos+4] = color;
+            
+            for (int j=pos;j<pos+10;j++){
+                img.getPixelsRef()[j] = color;
+            }
             
             i++;
+            
+            //img.cropFrom(glitch, ofRandom(50,300),ofRandom(50,200) , 10, 10);
+            
         }
         img.reloadTexture();
         
+        // Guardo la imagen glitcheada.
         img.saveImage("snapShot_" + ofToString(snapCounter) + ".png");
     }
     
+    
+    // Dibujo ambas imagenes.
     if (imgToSave.bAllocated()){
         imgToSave.draw(172,310);
         img.draw(510,310);

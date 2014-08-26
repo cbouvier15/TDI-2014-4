@@ -20,12 +20,11 @@ class ofApp : public ofBaseApp{
     
     
         ofVideoGrabber 		vidGrabber;
-        ofImage 			img;
         bool 				snapshot;
     
         int camHeight,camWidth,snapCounter;
     
-        ofImage imgToSave;
+        ofImage imgToSave,img,glitch;
     
         ofSoundPlayer  snapShotSound;
     
