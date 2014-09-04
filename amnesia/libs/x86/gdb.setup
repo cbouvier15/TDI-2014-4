@@ -1,6 +1,0 @@
-set solib-search-path /Users/matias/source/tdi/of_v0.8.3_android_release/examples/android/androidImageExample/obj/local/x86:/Users/matias/source/tdi/of_v0.8.3_android_release/examples/android/androidImageExample/libs/x86
-directory /Users/matias/source/tdi/android-ndk-r9b//platforms/android-17/arch-arm/usr/include
-directory /Users/matias/source/tdi/of_v0.8.3_android_release/examples/android/androidImageExample/src
-directory /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/system
-directory /Users/matias/source/tdi/of_v0.8.3_android_release/examples/android/androidImageExample/libs/x86
-
