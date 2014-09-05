@@ -1,22 +1,22 @@
 obj/android/x86/Release/src/main.o: src/main.cpp \
  ../../../libs/openFrameworks/ofMain.h \
  ../../../libs/openFrameworks/utils/ofConstants.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/typeinfo \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/typeinfo \
  ../../../libs/tess2/include/tesselator.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdlib \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cmath \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/ctime \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/string \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstring \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/iomanip \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/fstream \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cfloat \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdlib \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cmath \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/ctime \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/string \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstring \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/iomanip \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/fstream \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cfloat \
  ../../../libs/openFrameworks/utils/ofFileUtils.h \
  ../../../libs/poco/include/Poco/File.h \
  ../../../libs/poco/include/Poco/Foundation.h \
@@ -30,16 +30,16 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
  ../../../libs/openFrameworks/utils/ofLog.h \
  ../../../libs/openFrameworks/types/ofTypes.h \
  ../../../libs/openFrameworks/types/ofColor.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/limits \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/limits \
  ../../../libs/openFrameworks/math/ofMath.h \
  ../../../libs/openFrameworks/types/ofPoint.h \
  ../../../libs/openFrameworks/math/ofVec3f.h \
  ../../../libs/openFrameworks/math/ofVec2f.h \
  ../../../libs/openFrameworks/math/ofVec4f.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/tr1/memory \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/tr1/memory \
  ../../../libs/poco/include/Poco/Mutex.h \
  ../../../libs/poco/include/Poco/Exception.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/stdexcept \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/stdexcept \
  ../../../libs/poco/include/Poco/ScopedLock.h \
  ../../../libs/poco/include/Poco/Mutex_POSIX.h \
  ../../../libs/openFrameworks/utils/ofSystemUtils.h \
@@ -54,8 +54,8 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
  ../../../libs/poco/include/Poco/RefCountedObject.h \
  ../../../libs/poco/include/Poco/AutoPtr.h \
  ../../../libs/openFrameworks/utils/ofURLFileLoader.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/deque \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/queue \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/deque \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/queue \
  ../../../libs/openFrameworks/events/ofEvents.h \
  ../../../libs/openFrameworks/events/ofEventUtils.h \
  ../../../libs/poco/include/Poco/PriorityEvent.h \
@@ -78,7 +78,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
  ../../../libs/poco/include/Poco/Condition.h \
  ../../../libs/poco/include/Poco/ScopedUnlock.h \
  ../../../libs/openFrameworks/utils/ofUtils.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/bitset \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/bitset \
  ../../../libs/poco/include/Poco/Path.h \
  ../../../libs/openFrameworks/types/ofBaseTypes.h \
  ../../../libs/openFrameworks/types/ofRectangle.h \
@@ -88,7 +88,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
  ../../../libs/openFrameworks/math/ofMatrix4x4.h \
  ../../../libs/openFrameworks/math/ofQuaternion.h \
  ../../../libs/openFrameworks/utils/ofXml.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/numeric \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/numeric \
  ../../../libs/poco/include/Poco/DOM/Document.h \
  ../../../libs/poco/include/Poco/XML/XML.h \
  ../../../libs/poco/include/Poco/DOM/AbstractContainerNode.h \
@@ -98,8 +98,8 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
  ../../../libs/poco/include/Poco/DOM/DOMObject.h \
  ../../../libs/poco/include/Poco/XML/XMLString.h \
  ../../../libs/poco/include/Poco/SAX/NamespaceSupport.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/set \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/map \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/set \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/map \
  ../../../libs/poco/include/Poco/DOM/MutationEvent.h \
  ../../../libs/poco/include/Poco/DOM/Event.h \
  ../../../libs/poco/include/Poco/DOM/DocumentEvent.h \
@@ -107,7 +107,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
  ../../../libs/poco/include/Poco/XML/Name.h \
  ../../../libs/poco/include/Poco/XML/NamePool.h \
  ../../../libs/poco/include/Poco/AutoReleasePool.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/list \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/list \
  ../../../libs/poco/include/Poco/DOM/DocumentFragment.h \
  ../../../libs/poco/include/Poco/DOM/DOMParser.h \
  ../../../libs/poco/include/Poco/SAX/SAXParser.h \
@@ -149,7 +149,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
  ../../../libs/openFrameworks/gl/ofGLUtils.h \
  ../../../libs/openFrameworks/gl/ofGLRenderer.h \
  ../../../libs/openFrameworks/graphics/ofPolyline.h \
- /Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
+ /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
  ../../../libs/openFrameworks/graphics/ofGraphics.h \
  ../../../libs/openFrameworks/utils/ofMatrixStack.h \
  ../../../libs/openFrameworks/gl/ofLight.h \
@@ -192,37 +192,37 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/openFrameworks/utils/ofConstants.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/typeinfo:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/typeinfo:
 
 ../../../libs/tess2/include/tesselator.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdlib:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdlib:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cmath:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cmath:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/ctime:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/ctime:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/string:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/string:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstring:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cstring:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/iomanip:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/iomanip:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/fstream:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/fstream:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cfloat:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/cfloat:
 
 ../../../libs/openFrameworks/utils/ofFileUtils.h:
 
@@ -250,7 +250,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/openFrameworks/types/ofColor.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/limits:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/limits:
 
 ../../../libs/openFrameworks/math/ofMath.h:
 
@@ -262,13 +262,13 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/openFrameworks/math/ofVec4f.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/tr1/memory:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/tr1/memory:
 
 ../../../libs/poco/include/Poco/Mutex.h:
 
 ../../../libs/poco/include/Poco/Exception.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/stdexcept:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/stdexcept:
 
 ../../../libs/poco/include/Poco/ScopedLock.h:
 
@@ -298,9 +298,9 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/openFrameworks/utils/ofURLFileLoader.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/deque:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/deque:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/queue:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/queue:
 
 ../../../libs/openFrameworks/events/ofEvents.h:
 
@@ -346,7 +346,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/openFrameworks/utils/ofUtils.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/bitset:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/bitset:
 
 ../../../libs/poco/include/Poco/Path.h:
 
@@ -366,7 +366,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/openFrameworks/utils/ofXml.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/numeric:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/numeric:
 
 ../../../libs/poco/include/Poco/DOM/Document.h:
 
@@ -386,9 +386,9 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/poco/include/Poco/SAX/NamespaceSupport.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/set:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/set:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/map:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/map:
 
 ../../../libs/poco/include/Poco/DOM/MutationEvent.h:
 
@@ -404,7 +404,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/poco/include/Poco/AutoReleasePool.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/list:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/list:
 
 ../../../libs/poco/include/Poco/DOM/DocumentFragment.h:
 
@@ -488,7 +488,7 @@ obj/android/x86/Release/src/main.o: src/main.cpp \
 
 ../../../libs/openFrameworks/graphics/ofPolyline.h:
 
-/Devel/android/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
+/Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
 
 ../../../libs/openFrameworks/graphics/ofGraphics.h:
 

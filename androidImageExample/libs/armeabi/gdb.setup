@@ -1,6 +1,6 @@
-set solib-search-path /Devel/android/of_v0.8.3_android_release/examples/android/androidImageExample/obj/local/armeabi:/Devel/android/of_v0.8.3_android_release/examples/android/androidImageExample/libs/armeabi
-directory /Devel/android/android-ndk-r9b//platforms/android-17/arch-arm/usr/include
-directory /Devel/android/of_v0.8.3_android_release/examples/android/androidImageExample/src
-directory /Devel/android/android-ndk-r9b//sources/cxx-stl/system
-directory /Devel/android/of_v0.8.3_android_release/examples/android/androidImageExample/libs/armeabi
+set solib-search-path /Users/matias/source/tdi/of_v0.8.3_android_release/examples/android/androidImageExample/obj/local/armeabi:/Users/matias/source/tdi/of_v0.8.3_android_release/examples/android/androidImageExample/libs/armeabi
+directory /Users/matias/source/tdi/android-ndk-r9b//platforms/android-17/arch-arm/usr/include
+directory /Users/matias/source/tdi/of_v0.8.3_android_release/examples/android/androidImageExample/src
+directory /Users/matias/source/tdi/android-ndk-r9b//sources/cxx-stl/system
+directory /Users/matias/source/tdi/of_v0.8.3_android_release/examples/android/androidImageExample/libs/armeabi
 

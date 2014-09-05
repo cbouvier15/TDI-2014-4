@@ -5,7 +5,7 @@
 void ofApp::setup(){
 	ofSetOrientation(OF_ORIENTATION_90_LEFT);
 	ofxAccelerometer.setup();
-	image.loadImage("images/bikers.jpg");
+	image.loadImage("images/image.jpg");
 	ofBackground(255,255,255);
 	ofSetColor(255,255,255);
 
