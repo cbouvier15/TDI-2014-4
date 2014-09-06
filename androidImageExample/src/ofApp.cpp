@@ -243,6 +243,8 @@ void ofApp::swipe(ofxAndroidSwipeDir swipeDir, int id){
 //--------------------------------------------------------------
 void ofApp::pause(){
 	image.saveImage(imagePath);
+	presentation = true;
+	presentationCounter = 0;
 }
 
 //--------------------------------------------------------------
