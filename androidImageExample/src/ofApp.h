@@ -10,6 +10,7 @@ class ofApp : public ofxAndroidApp{
 	public:
 		
 		void setup();
+		void selectImage();
 		void update();
 		void draw();
 
@@ -33,7 +34,18 @@ class ofApp : public ofxAndroidApp{
 		void okPressed();
 		void cancelPressed();
 
-		ofImage image;
-		bool snapShot;
+		ofImage image, presentationImage;
 		ofVec3f accel;
+		ofDirectory imagesDir;
+		string imagePath;
+
+        void explosionGlitch(ofPixels pixels);
+        void stretchGlitch(ofPixels pixels);
+        void colorGlitch(ofPixels pixels);
+
+        bool shock,glitch, presentation;
+
+        int counter, presentationCounter;
+
+        int r,g,b;
 };
