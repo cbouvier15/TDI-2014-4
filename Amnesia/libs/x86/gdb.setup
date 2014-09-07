@@ -1,0 +1,6 @@
+set solib-search-path /Devel/android/of_v0.8.3_android_release/examples/android/Amnesia/obj/local/x86:/Devel/android/of_v0.8.3_android_release/examples/android/Amnesia/libs/x86
+directory /Devel/android/android-ndk-r9b//platforms/android-17/arch-arm/usr/include
+directory /Devel/android/of_v0.8.3_android_release/examples/android/Amnesia/src
+directory /Devel/android/android-ndk-r9b//sources/cxx-stl/system
+directory /Devel/android/of_v0.8.3_android_release/examples/android/Amnesia/libs/x86
+
