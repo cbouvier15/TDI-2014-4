@@ -66,12 +66,13 @@ void ofApp::update(){
 				stretchGlitch(pixels);
 			}else if(glitchNum == 3){
 				// Aplico el glitch
-				colorGlitch(pixels);
+                mergeGlitch(pixels);
 			}
 			shock_soft = false;
     	}
     	if(shock_hard){
         	mergeGlitch(pixels);
+            colorGlitch(pixels);
         	shock_hard = false;
         }
 
