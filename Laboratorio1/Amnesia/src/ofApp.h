@@ -42,8 +42,9 @@ class ofApp : public ofxAndroidApp{
         void explosionGlitch(ofPixels pixels);
         void stretchGlitch(ofPixels pixels);
         void colorGlitch(ofPixels pixels);
+        void mergeGlitch(ofPixels pixels);
 
-        bool shock,glitch, presentation;
+        bool shock_soft,shock_hard,glitch, presentation;
 
         int counter, presentationCounter;
 

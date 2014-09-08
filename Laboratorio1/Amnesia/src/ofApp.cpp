@@ -5,7 +5,7 @@
 void ofApp::setup(){
 	presentation = true;
 	presentationCounter = 0;
-    shock = glitch = false;
+    shock_soft = shock_hard = glitch = false;
 
     counter = 0;
 
@@ -36,13 +36,15 @@ void ofApp::selectImage(){
 void ofApp::update(){
 	accel = ofxAccelerometer.getForce();
 	if((accel.x > 1.3) || (accel.y > 1.3)){
-		shock = true;
+		shock_soft = true;
+	}else if((accel.x > 2.6) || (accel.y > 2.6)){
+		shock_hard = true;
 	}
 
     // Obtengo los pixeles del video en el momento
     ofPixels pixels = image.getPixelsRef();
 
-    if(shock){
+    if(shock_soft || shock_hard){
         r = ofRandom(0, 255);
         g = ofRandom(0, 255);
         b = ofRandom(0, 255);
@@ -54,19 +56,27 @@ void ofApp::update(){
     }
 
     if(glitch){
-        int glitchNum = ofRandom(1,4);
-        if(glitchNum == 1 ){
-            // Aplico el glitch
-            explosionGlitch(pixels);
-        }else if (glitchNum == 2){
-            // Aplico el glitch
-            stretchGlitch(pixels);
-        }else if(glitchNum == 3){
-            // Aplico el glitch
-            colorGlitch(pixels);
+    	if(shock_soft){
+			int glitchNum = ofRandom(1,4);
+			if(glitchNum == 1 ){
+				// Aplico el glitch
+				explosionGlitch(pixels);
+			}else if (glitchNum == 2){
+				// Aplico el glitch
+				stretchGlitch(pixels);
+			}else if(glitchNum == 3){
+				// Aplico el glitch
+				colorGlitch(pixels);
+			}
+			shock_soft = false;
+    	}
+    	if(shock_hard){
+        	mergeGlitch(pixels);
+        	shock_hard = false;
         }
+
         glitch = false;
-        shock = false;
+
         r = 255;
         g = 255;
         b = 255;
@@ -199,6 +209,39 @@ void ofApp::colorGlitch(ofPixels pixels){
     }
     // Actualizo pixels
     image.setFromPixels(pixels);
+}
+
+void ofApp::mergeGlitch(ofPixels pixels){
+
+	// Cargo imagen aleatoria para merge
+	ofImage toMerge;
+	imagesDir.listDir("images");
+	int randomImage = ofRandom(0,imagesDir.size()-1);
+	imagePath = imagesDir.getPath(randomImage);
+	toMerge.loadImage(imagePath);
+	ofPixels toMergePixeles = toMerge.getPixelsRef();
+
+	// Aplico merge
+	int explosionQty = 0;
+
+	while (explosionQty < 15){
+		// Inicializo las matrices para el intercambio de colores.
+		int limitI = ofRandom(16,128);
+		int limitJ = ofRandom(16,128);
+
+		// Obtengo dos posiciones aleatorais
+		int posX0 = ofRandom(0,pixels.getWidth()-128);
+		int posY0 = ofRandom(0,pixels.getHeight()-128);
+
+		//Scan all the pixels
+		for(int y=posY0,i=0;y<pixels.getHeight(),i<limitI;y++,i++){
+			for(int x=posX0,j=0;x<pixels.getWidth(),j<limitJ;x++,j++){
+				 pixels.setColor(x, y,toMergePixeles.getColor(x,y));
+			}
+		}
+		explosionQty++;
+	}
+	image.setFromPixels(pixels);
 }
 
 //--------------------------------------------------------------
