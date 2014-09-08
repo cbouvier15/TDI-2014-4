@@ -36,7 +36,7 @@ void ofApp::selectImage(){
 void ofApp::update(){
 	accel = ofxAccelerometer.getForce();
 
-	if((fabs(accel.x) > 2.1) || (fabs(accel.y) > 2.1)){
+	if((fabs(accel.x) > 2.0) || (fabs(accel.y) > 2.0)){
 		shock_hard = true;
 	}else if((fabs(accel.x) > 1.3) || (fabs(accel.y) > 1.3)){
 		shock_soft = true;
