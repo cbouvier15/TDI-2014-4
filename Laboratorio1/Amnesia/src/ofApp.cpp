@@ -26,7 +26,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::selectImage(){
 	imagesDir.listDir("images");
-	int randomImage = ofRandom(0,imagesDir.size()-1);
+	int randomImage = ofRandom(0,imagesDir.size());
 	imagePath = imagesDir.getPath(randomImage);
 
 	image.loadImage(imagePath);
@@ -35,10 +35,11 @@ void ofApp::selectImage(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	accel = ofxAccelerometer.getForce();
-	if((accel.x > 1.3) || (accel.y > 1.3)){
-		shock_soft = true;
-	}else if((accel.x > 2.6) || (accel.y > 2.6)){
+
+	if((fabs(accel.x) > 2.1) || (fabs(accel.y) > 2.1)){
 		shock_hard = true;
+	}else if((fabs(accel.x) > 1.3) || (fabs(accel.y) > 1.3)){
+		shock_soft = true;
 	}
 
     // Obtengo los pixeles del video en el momento
@@ -66,13 +67,12 @@ void ofApp::update(){
 				stretchGlitch(pixels);
 			}else if(glitchNum == 3){
 				// Aplico el glitch
-                mergeGlitch(pixels);
+				mergeGlitch(pixels);
 			}
 			shock_soft = false;
     	}
     	if(shock_hard){
-        	mergeGlitch(pixels);
-            colorGlitch(pixels);
+    		colorGlitch(pixels);
         	shock_hard = false;
         }
 
@@ -217,7 +217,7 @@ void ofApp::mergeGlitch(ofPixels pixels){
 	// Cargo imagen aleatoria para merge
 	ofImage toMerge;
 	imagesDir.listDir("images");
-	int randomImage = ofRandom(0,imagesDir.size()-1);
+	int randomImage = ofRandom(0,imagesDir.size());
 	imagePath = imagesDir.getPath(randomImage);
 	toMerge.loadImage(imagePath);
 	ofPixels toMergePixeles = toMerge.getPixelsRef();
@@ -227,12 +227,12 @@ void ofApp::mergeGlitch(ofPixels pixels){
 
 	while (explosionQty < 15){
 		// Inicializo las matrices para el intercambio de colores.
-		int limitI = ofRandom(16,128);
-		int limitJ = ofRandom(16,128);
+		int limitI = ofRandom(64,256);
+		int limitJ = ofRandom(64,256);
 
 		// Obtengo dos posiciones aleatorais
-		int posX0 = ofRandom(0,pixels.getWidth()-128);
-		int posY0 = ofRandom(0,pixels.getHeight()-128);
+		int posX0 = ofRandom(0,pixels.getWidth()-256);
+		int posY0 = ofRandom(0,pixels.getHeight()-256);
 
 		//Scan all the pixels
 		for(int y=posY0,i=0;y<pixels.getHeight(),i<limitI;y++,i++){
