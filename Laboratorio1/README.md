@@ -7,6 +7,6 @@ caso medido a través del acelerometro.
 
 Las imagenes seleccionadas son modificadas aleatoriamente usando distintos glitches, que varian según la intensidad de la aceleración capturada.
 
-Para llevar a cabo esto se utilizo openframeworks para android.  
+Para llevar a cabo esto se utilizo [openframeworks](http://openframeworks.cc) para android.  
 
 
