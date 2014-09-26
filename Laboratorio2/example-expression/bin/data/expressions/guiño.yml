@@ -1,5 +1,5 @@
 %YAML:1.0
-description: "guiño"
+description: ";)"
 samples:
    - !!opencv-matrix
       rows: 198
