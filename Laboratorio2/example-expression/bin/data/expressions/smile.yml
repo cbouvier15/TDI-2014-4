@@ -1,5 +1,5 @@
 %YAML:1.0
-description: smile
+description: ":)"
 samples:
    - !!opencv-matrix
       rows: 198
