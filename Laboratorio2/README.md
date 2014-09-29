@@ -11,6 +11,9 @@ Por otra parte emoticon-tracker está desarrollado en C y se basa en ejemplo exa
 
 https://github.com/kylemcdonald/ofxFaceTracker
 
+La comunicación entre EmTrack y emoticon-tracker se realiza a través del protocolo UDP utilizando la librería AsyncCocoaSocket para Objective-C (https://github.com/robbiehanson/CocoaAsyncSocket) y el Addon ofxNetwork de OpenFrameworks.
 
-Este prototipo por motivos de alcance no implementa el ingreso automático del emoticón en la ventana del chat, sino que utiliza como puente entre las dos aplicaciones el portapapeles del Sistema Operativo
+Este prototipo por motivos de alcance no implementa el ingreso automático del emoticón en la ventana del chat, sino que utiliza como puente entre las dos aplicaciones el portapapeles del Sistema Operativo.
+
+
 
