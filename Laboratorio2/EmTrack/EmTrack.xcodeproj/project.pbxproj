@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60D1D85019D9F10000577206 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D1D84F19D9F10000577206 /* Cocoa.framework */; };
+		60D1D85A19D9F10000577206 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60D1D85819D9F10000577206 /* InfoPlist.strings */; };
+		60D1D86319D9F27900577206 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D1D86119D9F27900577206 /* Adium.framework */; };
+		60D1D86419D9F27900577206 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D1D86219D9F27900577206 /* AIUtilities.framework */; };
+		60D1D86719D9F2EA00577206 /* EmTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D1D86619D9F2EA00577206 /* EmTrack.m */; };
+		60D1D86D19D9F5F100577206 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D1D86A19D9F5F100577206 /* AsyncUdpSocket.m */; };
+		60D1D86E19D9F5F100577206 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D1D86C19D9F5F100577206 /* GCDAsyncUdpSocket.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		60D1D84C19D9F10000577206 /* EmTrack.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmTrack.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		60D1D84F19D9F10000577206 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		60D1D85219D9F10000577206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60D1D85319D9F10000577206 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		60D1D85419D9F10000577206 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		60D1D85719D9F10000577206 /* EmTrack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmTrack-Info.plist"; sourceTree = "<group>"; };
+		60D1D85919D9F10000577206 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60D1D85B19D9F10000577206 /* EmTrack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmTrack-Prefix.pch"; sourceTree = "<group>"; };
+		60D1D86119D9F27900577206 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
+		60D1D86219D9F27900577206 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIUtilities.framework; sourceTree = "<group>"; };
+		60D1D86519D9F2EA00577206 /* EmTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmTrack.h; sourceTree = SOURCE_ROOT; };
+		60D1D86619D9F2EA00577206 /* EmTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmTrack.m; sourceTree = SOURCE_ROOT; };
+		60D1D86919D9F5F100577206 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		60D1D86A19D9F5F100577206 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		60D1D86B19D9F5F100577206 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		60D1D86C19D9F5F100577206 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60D1D84919D9F10000577206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60D1D85019D9F10000577206 /* Cocoa.framework in Frameworks */,
+				60D1D86319D9F27900577206 /* Adium.framework in Frameworks */,
+				60D1D86419D9F27900577206 /* AIUtilities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60D1D84319D9F10000577206 = {
+			isa = PBXGroup;
+			children = (
+				60D1D86819D9F5D000577206 /* UDP */,
+				60D1D85519D9F10000577206 /* EmTrack */,
+				60D1D84E19D9F10000577206 /* Frameworks */,
+				60D1D84D19D9F10000577206 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60D1D84D19D9F10000577206 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60D1D84C19D9F10000577206 /* EmTrack.AdiumPlugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60D1D84E19D9F10000577206 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60D1D84F19D9F10000577206 /* Cocoa.framework */,
+				60D1D85119D9F10000577206 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60D1D85119D9F10000577206 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60D1D86119D9F27900577206 /* Adium.framework */,
+				60D1D86219D9F27900577206 /* AIUtilities.framework */,
+				60D1D85219D9F10000577206 /* Foundation.framework */,
+				60D1D85319D9F10000577206 /* CoreData.framework */,
+				60D1D85419D9F10000577206 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		60D1D85519D9F10000577206 /* EmTrack */ = {
+			isa = PBXGroup;
+			children = (
+				60D1D86519D9F2EA00577206 /* EmTrack.h */,
+				60D1D86619D9F2EA00577206 /* EmTrack.m */,
+				60D1D85619D9F10000577206 /* Supporting Files */,
+			);
+			path = EmTrack;
+			sourceTree = "<group>";
+		};
+		60D1D85619D9F10000577206 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60D1D85719D9F10000577206 /* EmTrack-Info.plist */,
+				60D1D85819D9F10000577206 /* InfoPlist.strings */,
+				60D1D85B19D9F10000577206 /* EmTrack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60D1D86819D9F5D000577206 /* UDP */ = {
+			isa = PBXGroup;
+			children = (
+				60D1D86919D9F5F100577206 /* AsyncUdpSocket.h */,
+				60D1D86A19D9F5F100577206 /* AsyncUdpSocket.m */,
+				60D1D86B19D9F5F100577206 /* GCDAsyncUdpSocket.h */,
+				60D1D86C19D9F5F100577206 /* GCDAsyncUdpSocket.m */,
+			);
+			name = UDP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60D1D84B19D9F10000577206 /* EmTrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60D1D85E19D9F10000577206 /* Build configuration list for PBXNativeTarget "EmTrack" */;
+			buildPhases = (
+				60D1D84819D9F10000577206 /* Sources */,
+				60D1D84919D9F10000577206 /* Frameworks */,
+				60D1D84A19D9F10000577206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmTrack;
+			productName = EmTrack;
+			productReference = 60D1D84C19D9F10000577206 /* EmTrack.AdiumPlugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60D1D84419D9F10000577206 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = fing;
+			};
+			buildConfigurationList = 60D1D84719D9F10000577206 /* Build configuration list for PBXProject "EmTrack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 60D1D84319D9F10000577206;
+			productRefGroup = 60D1D84D19D9F10000577206 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60D1D84B19D9F10000577206 /* EmTrack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60D1D84A19D9F10000577206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60D1D85A19D9F10000577206 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60D1D84819D9F10000577206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60D1D86719D9F2EA00577206 /* EmTrack.m in Sources */,
+				60D1D86E19D9F5F100577206 /* GCDAsyncUdpSocket.m in Sources */,
+				60D1D86D19D9F5F100577206 /* AsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60D1D85819D9F10000577206 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60D1D85919D9F10000577206 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60D1D85C19D9F10000577206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		60D1D85D19D9F10000577206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		60D1D85F19D9F10000577206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmTrack/EmTrack-Prefix.pch";
+				INFOPLIST_FILE = "EmTrack/EmTrack-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Debug;
+		};
+		60D1D86019D9F10000577206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmTrack/EmTrack-Prefix.pch";
+				INFOPLIST_FILE = "EmTrack/EmTrack-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60D1D84719D9F10000577206 /* Build configuration list for PBXProject "EmTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60D1D85C19D9F10000577206 /* Debug */,
+				60D1D85D19D9F10000577206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60D1D85E19D9F10000577206 /* Build configuration list for PBXNativeTarget "EmTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60D1D85F19D9F10000577206 /* Debug */,
+				60D1D86019D9F10000577206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60D1D84419D9F10000577206 /* Project object */;
+}
