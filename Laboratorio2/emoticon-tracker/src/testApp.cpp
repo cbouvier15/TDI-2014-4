@@ -33,7 +33,7 @@ void testApp::update() {
     // Al recibir una señal en este puerto, se captura la
     // expresion y se guarda en el portapepeles el codigo
     // de emoticon para obtenerlo desde Adium.
-    cout << udpConnection_cmd.Receive(&signal, 1);
+    udpConnection_cmd.Receive(&signal, 1);
     if(signal == 'a'){
         getAndSendActualExpression();
     }
