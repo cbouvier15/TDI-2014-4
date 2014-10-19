@@ -143,35 +143,86 @@ void ofApp::markToDraw(int current){
         
     // Dos question seleccionadas
     }else if (count==2){
-        int ready = false;
-        int index = 0;
-        int intersection = 0;
-        int toDrawCurrent = 0;
-        // Busco cual es la que esta dibujada
-        while(!ready){
-            if ((current != index) && (selectedQuestion[index])) {
-                ready = true;
-            }else {index++;}
+        // Si seleccione current
+        if(selectedQuestion[current]){
+            int ready = false;
+            int index = 0;
+            int intersection = 0;
+            int toDrawCurrent = 0;
+            // Busco cual es la que esta dibujada
+            while(!ready){
+                if ((current != index) && (selectedQuestion[index])) {
+                    ready = true;
+                }else {index++;}
+            }
+            
+            // Calculo la cantidad de butacas de interseccion a dibujar
+            float probIndex = ((float)(survey[index].yesAnswer))/100.0;
+            float probCurrent = ((float)(survey[current].yesAnswer))/100.0;
+            intersection = (int)((probIndex*probCurrent)*100);
+            
+            // Calculo la cantidad de butacas sin interseccion a dibujar
+            toDrawCurrent = survey[current].yesAnswer - intersection;
+            
+            for(int i=0; i<10; i++){
+                for(int j=0; j<10; j++){
+                    // Si ya tiene dibujada una question, en caso de quedar intersecciones marco
+                    // una para dibujar
+                    if((cineControl[i][j].question[index] == true) && (intersection>0)){
+                        cineControl[i][j].question[current] = true;
+                        intersection--;
+                        // Si no tiene dibujada una question, en caso de quedar sin interseccion marco
+                        // una para dibujar
+                    }else if ((cineControl[i][j].question[index] == false) && (toDrawCurrent>0)){
+                        cineControl[i][j].question[current] = true;
+                        toDrawCurrent--;
+                    }
+                }
+            }
+          // Si deseleccione current
+        }else{
+            // Marco butacas a quitar modelo pregunta
+            for(int i=0; i<10; i++){
+                for(int j=0; j<10; j++){
+                    cineControl[i][j].question[current] = false;
+                }
+            }
         }
-        
+    }else if (count ==3){
+        int ready = false;
+        int index1, index2 = -1;
+        for(int i=0; i<questionCount; i++){
+            if(i != current && selectedQuestion[i]){
+                if(index1 == -1)
+                    index1 = i;
+                else
+                    index2 = i;
+            }
+        }
         // Calculo la cantidad de butacas de interseccion a dibujar
-        float probIndex = ((float)(survey[index].yesAnswer))/100.0;
+        float probIndex1 = ((float)(survey[index1].yesAnswer))/100.0;
         float probCurrent = ((float)(survey[current].yesAnswer))/100.0;
-        intersection = (int)((probIndex*probCurrent)*100);
-        
-        // Calculo la cantidad de butacas sin interseccion a dibujar
-        toDrawCurrent = survey[current].yesAnswer - intersection;
+        int intersection1 = (int)((probIndex1*probCurrent)*100);
 
+        float probIndex2 = ((float)(survey[index2].yesAnswer))/100.0;
+        int intersection2 = (int)((probIndex2*probCurrent)*100);
+
+        int intersectionTriple = int(probIndex2*probCurrent*probIndex1*100);
+        
+        int toDrawCurrent = survey[current].yesAnswer - intersection1 - intersection2 - intersectionTriple;
+        
         for(int i=0; i<10; i++){
             for(int j=0; j<10; j++){
-                // Si ya tiene dibujada una question, en caso de quedar intersecciones marco
-                // una para dibujar
-                if((cineControl[i][j].question[index] == true) && (intersection>0)){
+                if(cineControl[i][j].question[index1] && cineControl[i][j].question[index2] && (intersectionTriple>0)){
                     cineControl[i][j].question[current] = true;
-                    intersection--;
-                // Si no tiene dibujada una question, en caso de quedar sin interseccion marco
-                // una para dibujar
-                }else if ((cineControl[i][j].question[index] == false) && (toDrawCurrent>0)){
+                    intersectionTriple--;
+                }else if(cineControl[i][j].question[index1] && !cineControl[i][j].question[index2] && (intersection1>0)){
+                    cineControl[i][j].question[current] = true;
+                    intersection1--;
+                }else if(!cineControl[i][j].question[index1] && cineControl[i][j].question[index2] && (intersection2>0)){
+                    cineControl[i][j].question[current] = true;
+                    intersection2--;
+                }else if(!cineControl[i][j].question[index1] && !cineControl[i][j].question[index2] && (toDrawCurrent>0)){
                     cineControl[i][j].question[current] = true;
                     toDrawCurrent--;
                 }
