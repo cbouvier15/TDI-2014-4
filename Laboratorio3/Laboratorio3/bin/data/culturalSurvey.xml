@@ -1,37 +1,37 @@
 <culturalSurvey>
 	<questionNode>
-		<question>Usualmente lee libros?</question>
+		<!-- <question>Usualmente lee libros?</question> -->
 		<yesAnswer>74</yesAnswer>
 		<noAnswer>26</noAnswer>
-		<iconPath>fdfegwg</iconPath>
-		<modelPath>fdfegwg</modelPath>
+		<!-- <iconPath>fdfegwg</iconPath> -->
+		<!-- <modelPath>fdfegwg</modelPath> -->
 	</questionNode>
     <questionNode>
-        <question>Usualmente lee libros?</question>
-        <yesAnswer>74</yesAnswer>
-        <noAnswer>26</noAnswer>
-        <iconPath>fdfegwg</iconPath>
-        <modelPath>fdfegwg</modelPath>
+        <!-- <question>Usualmente lee libros?</question> -->
+        <yesAnswer>48</yesAnswer>
+        <noAnswer>52</noAnswer>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
     </questionNode>
     <questionNode>
-        <question>Usualmente lee libros?</question>
+        <!-- <question>Usualmente lee libros?</question> -->
         <yesAnswer>74</yesAnswer>
         <noAnswer>26</noAnswer>
-        <iconPath>fdfegwg</iconPath>
-        <modelPath>fdfegwg</modelPath>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
     </questionNode>
     <questionNode>
-        <question>Usualmente lee libros?</question>
+        <!-- <question>Usualmente lee libros?</question> -->
         <yesAnswer>74</yesAnswer>
         <noAnswer>26</noAnswer>
-        <iconPath>fdfegwg</iconPath>
-        <modelPath>fdfegwg</modelPath>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
     </questionNode>
     <questionNode>
-        <question>Usualmente lee libros?</question>
+        <!-- <question>Usualmente lee libros?</question> -->
         <yesAnswer>74</yesAnswer>
         <noAnswer>26</noAnswer>
-        <iconPath>fdfegwg</iconPath>
-        <modelPath>fdfegwg</modelPath>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
     </questionNode>
 </culturalSurvey>

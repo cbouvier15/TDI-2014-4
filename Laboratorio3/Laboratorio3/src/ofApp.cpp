@@ -67,29 +67,119 @@ void ofApp::setupData(){
     
     survey = new question_node[questionCount];
     
-    cout << "****** START XML PARSING *******" << endl;
     xml_file.pushTag("culturalSurvey");
     questionCount = xml_file.getNumTags("questionNode");
-    cout << "Cantidad question node: " << questionCount << endl;
+    
+    // Inicializo Información de estado las preguntas
+    selectedQuestion = new bool[questionCount];
+    for(int i=0; i<questionCount; i++) {selectedQuestion[i]=0;}
+    
+    // Inicializo Información de estado de las butacas por preguntas
+    for(int i=0; i<10; i++){
+        for(int j=0; j<10; j++){
+            cineControl[i][j].question = new bool[questionCount];
+            for(int k=0; k<questionCount; k++) {cineControl[i][j].question[k]=false;}
+        }
+    }
+
     for(int i = 0; i < questionCount; i++){
         xml_file.pushTag("questionNode",i);
-        cout << "Inicio nodo" << i << endl;
-        survey[i].question = (char*)(xml_file.getValue("question", "").c_str());
-        cout << survey[i].question << endl;
+//        survey[i].question = (char*)(xml_file.getValue("question", "").c_str());
+//        cout << survey[i].question << endl;
         survey[i].yesAnswer = xml_file.getValue("yesAnswer", 0);
-        cout << survey[i].yesAnswer << endl;
         survey[i].noAnswer = xml_file.getValue("noAnswer", 0);
-        cout << survey[i].noAnswer << endl;
-        survey[i].iconPath = (char*)(xml_file.getValue("iconPath", "").c_str());
-        cout << survey[i].iconPath << endl;
-        survey[i].modelPath = (char*)(xml_file.getValue("modelPath", "").c_str());
-        cout << survey[i].modelPath << endl;
+//        survey[i].iconPath = (char*)(xml_file.getValue("iconPath", "").c_str());
+//        cout << survey[i].iconPath << endl;
+//        survey[i].modelPath = (char*)(xml_file.getValue("modelPath", "").c_str());
+//        cout << survey[i].modelPath << endl;
         xml_file.popTag();
-        cout << "Fin nodo" << i << endl;
     }
     xml_file.popTag();
-    cout << "****** END XML PARSING *******" << endl;
 }
+//--------------------------------------------------------------
+
+// Se encarga de marcar que butacas dibujar según la cantidad
+// De preguntas seleccionadas
+void ofApp::markToDraw(int current){
+    int count=0;
+    
+    cout << "ENTRA A markToDraw con current: " << current << endl;
+    
+    for(int i=0; i<questionCount;i++){
+        if(selectedQuestion[i]){count++;}
+    }
+    
+    cout << "La cantidad de question seleccionadas: " << count << endl;
+    
+    if (count == 0){
+        for(int i = 0; i<10; i++){
+            for(int j = 0; j<10; j++){
+                cineControl[i][j].question[current] = false;
+            }
+        }
+    }
+    // Solo una question seleccionada
+    else if(count==1){
+        int toDraw;
+        bool drawValue;
+        // Chequeo si hay solo una porque habian 0
+        // o porque habian 2
+        if(selectedQuestion[current]){
+            toDraw = survey[current].yesAnswer;
+            drawValue = true;
+        }else{
+            drawValue = false;
+            toDraw = 100;
+        }
+        // Marco butacas a dibujar o quitar modelo pregunta
+        for(int i=0; i<10; i++){
+            for(int j=0; j<10; j++){
+                if(toDraw>0){
+                    cineControl[i][j].question[current] = drawValue;
+                    toDraw--;
+                }
+            }
+        }
+        
+    // Dos question seleccionadas
+    }else if (count==2){
+        int ready = false;
+        int index = 0;
+        int intersection = 0;
+        int toDrawCurrent = 0;
+        // Busco cual es la que esta dibujada
+        while(!ready){
+            if ((current != index) && (selectedQuestion[index])) {
+                ready = true;
+            }else {index++;}
+        }
+        
+        // Calculo la cantidad de butacas de interseccion a dibujar
+        float probIndex = ((float)(survey[index].yesAnswer))/100.0;
+        float probCurrent = ((float)(survey[current].yesAnswer))/100.0;
+        intersection = (int)((probIndex*probCurrent)*100);
+        
+        // Calculo la cantidad de butacas sin interseccion a dibujar
+        toDrawCurrent = survey[current].yesAnswer - intersection;
+
+        for(int i=0; i<10; i++){
+            for(int j=0; j<10; j++){
+                // Si ya tiene dibujada una question, en caso de quedar intersecciones marco
+                // una para dibujar
+                if((cineControl[i][j].question[index] == true) && (intersection>0)){
+                    cineControl[i][j].question[current] = true;
+                    intersection--;
+                // Si no tiene dibujada una question, en caso de quedar sin interseccion marco
+                // una para dibujar
+                }else if ((cineControl[i][j].question[index] == false) && (toDrawCurrent>0)){
+                    cineControl[i][j].question[current] = true;
+                    toDrawCurrent--;
+                }
+            }
+        }
+    }
+}
+
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -131,7 +221,7 @@ void ofApp::setup(){
     setupCamera();
     
     // Data
-    //setupData();
+    setupData();
     
     ticks = 0;
     rotate = false;
@@ -150,41 +240,20 @@ void ofApp::guiEvent(ofxUIEventArgs &e){
     
     if(name == "TOGGLE1"){
         ofxUIToggle *toggle = (ofxUIToggle *) e.widget;
-        cout << "value TOGGLE1: " << toggle->getValue() << endl;
-        
-        for(int i=0;i<10;i++){
-            for(int j=0;j<10;j++){
-                if(toggle->getValue()){
-                    drawCone = true;
-                }else{
-                    drawCone = false;
-                }
-            }
-        }
-        
+        selectedQuestion[0] = toggle->getValue();
+        // Se marco/desmarco pregunta 0
+        markToDraw(0);
     } else if(name == "TOGGLE3"){
         ofxUIToggle *toggle = (ofxUIToggle *) e.widget;
-        cout << "value TOGGLE3: " << toggle->getValue() << endl;
-        
-        for(int i=0;i<10;i++){
-            for(int j=0;j<10;j++){
-                if(toggle->getValue()){
-                    drawBall=true;
-                }else{
-                    drawBall=false;
-                }
-            }
-        }
+        selectedQuestion[1] = toggle->getValue();
+        // Se marco/desmarco pregunta 1
+        markToDraw(1);
     }else if(name == "TOGGLE2"){
         ofxUIToggle *toggle = (ofxUIToggle *) e.widget;
-        cout << "value TOGGLE2: " << toggle->getValue() << endl;
+        selectedQuestion[2] = toggle->getValue();
         rotate = true;
     }else if(name == "DROP DOWN LIST"){
         ofxUIDropDownList *dropDown = (ofxUIDropDownList *) e.widget;
-        
-        if(dropDown->getSelectedNames().size() > 0){
-            cout << "value DROP DOWN: " << dropDown->getSelectedNames()[0] << endl;
-        }
     }
 }
 
@@ -233,13 +302,16 @@ void ofApp::draw(){
                     cine[i][j].butaca3D.draw();
                     //ofSetColor(255.f,255.f,255.f);
                 }
-                if (drawBall){
+                // ESTA SOLO PARA DOS PREGUNTAS - HAY QUE ACTUALIZARLO A MAS PREGUNTAS LUEGO
+
+                // Se dibujan/quitan modelos de pregunta 0
+                if (cineControl[i][j].question[0]){
                     textura_esfera.getTextureReference().bind();
                     ofDrawSphere(cine[i][j].butaca3D.pos[0],cine[i][j].butaca3D.pos[1] ,cine[i][j].butaca3D.pos[2]+75, 25);
                     textura_esfera.getTextureReference().unbind();
                 }
-                
-                if(drawCone){
+                // Se dibujan/quitan modelos de pregunta 1
+                if(cineControl[i][j].question[1]){
                     textura_cono.getTextureReference().bind();
                     ofDrawCone(cine[i][j].butaca3D.pos[0],cine[i][j].butaca3D.pos[1] ,cine[i][j].butaca3D.pos[2]+100, 25,25);
                     textura_cono.getTextureReference().unbind();

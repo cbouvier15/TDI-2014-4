@@ -20,6 +20,11 @@ typedef struct question_node{
     char* modelPath;
 }question_node;
 
+// Control de preguntas a dibujar
+typedef struct drawQuestion{
+    bool* question;
+}drawQuestion;
+
 class ofApp : public ofBaseApp{
 	
 	public:
@@ -30,6 +35,7 @@ class ofApp : public ofBaseApp{
         void setupLights();
         void setupCamera();
         void setupData();
+        void  markToDraw(int current); // Encargada de marcar que dibujar y que no
         void mouseMoved(int x, int y );
         void mouseDragged(int x, int y, int button);
         void guiEvent(ofxUIEventArgs &e);
@@ -46,6 +52,7 @@ class ofApp : public ofBaseApp{
         ofVec3f target_pos;
     
         butaca cine[10][10];
+        drawQuestion cineControl[10][10]; // Control sobre que preguntas hay dibujadas o hay que dibujar por butaca
     
         ofPlanePrimitive piso;
         ofImage textura_esfera;
@@ -57,6 +64,7 @@ class ofApp : public ofBaseApp{
         bool rotate;
         bool drawBall;
         bool drawCone;
+        bool* selectedQuestion; // Estado de preguntas seleccionadas/no-seleccionadas
     
         ofxUIDropDownList *ddl;
     
