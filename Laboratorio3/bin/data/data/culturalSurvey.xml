@@ -1,0 +1,44 @@
+<culturalSurvey>
+    <questionNode>
+        <!-- <question>Ha visto cine uruguayo alguna vez?</question> -->
+        <yesAnswer>69</yesAnswer>
+        <noAnswer>31</noAnswer>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
+    </questionNode>
+    <questionNode>
+        <!-- <question>Museos</question> -->
+        <yesAnswer>40</yesAnswer>
+        <noAnswer>60</noAnswer>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
+    </questionNode>
+    <questionNode>
+        <!-- <question>Usualmente lee libros?</question> -->
+        <yesAnswer>74</yesAnswer>
+        <noAnswer>26</noAnswer>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
+    </questionNode>
+    <questionNode>
+        <!-- <question>Recitales o conciertos</question> -->
+        <yesAnswer>35</yesAnswer>
+        <noAnswer>65</noAnswer>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
+    </questionNode>
+    <questionNode>
+        <!-- <question>Espectaculo de danza</question> -->
+        <yesAnswer>74</yesAnswer>
+        <noAnswer>26</noAnswer>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
+    </questionNode>
+    <questionNode>
+        <!-- <question>Usualmente lee periodicos?</question> -->
+        <yesAnswer>59</yesAnswer>
+        <noAnswer>41</noAnswer>
+        <!-- <iconPath>fdfegwg</iconPath> -->
+        <!-- <modelPath>fdfegwg</modelPath> -->
+    </questionNode>
+</culturalSurvey>

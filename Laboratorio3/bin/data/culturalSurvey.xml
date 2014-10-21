@@ -1,0 +1,74 @@
+<culturalSurvey>
+	<questionNode>
+		<question>Lee libros usualmente.</question>
+		<yesAnswer>74</yesAnswer>
+		<noAnswer>26</noAnswer>
+		<iconPath>icons/Libro.png</iconPath>
+		<iconName>Libro</iconName>
+		<modelPath>objects/libro.3DS</modelPath>
+		<modelColorR>145</modelColorR>
+		<modelColorG>94</modelColorG>
+		<modelColorB>31</modelColorB>
+		<modelScale>3</modelScale>
+	</questionNode>
+	<questionNode>
+		<question>Asiste a conciertos o recitales.</question>
+		<yesAnswer>35</yesAnswer>
+		<noAnswer>65</noAnswer>
+		<iconPath>icons/Guitar.png</iconPath>
+		<iconName>Guitar</iconName>
+		<modelPath>objects/guitar.3DS</modelPath>
+		<modelColorR>172</modelColorR>
+		<modelColorG>31</modelColorG>
+		<modelColorB>35</modelColorB>
+		<modelScale>0.2</modelScale>		
+	</questionNode>
+	<questionNode>
+		<question>Ha visto cine uruguayo.</question>
+		<yesAnswer>69</yesAnswer>
+		<noAnswer>31</noAnswer>
+		<iconPath>icons/Cine.png</iconPath>
+		<iconName>Cine</iconName>
+		<modelPath>objects/cinema_roll.3DS</modelPath>
+		<modelColorR>108</modelColorR>
+		<modelColorG>109</modelColorG>
+		<modelColorB>108</modelColorB>
+		<modelScale>0.35</modelScale>		
+	</questionNode>	
+	<questionNode>
+		<question>Frecuenta espectaculos de Danza.</question>
+		<yesAnswer>26</yesAnswer>
+		<noAnswer>74</noAnswer>
+		<iconPath>icons/Maracas.png</iconPath>
+		<iconName>Maracas</iconName>
+		<modelPath>objects/maraca.3DS</modelPath>
+		<modelColorR>179</modelColorR>
+		<modelColorG>61</modelColorG>
+		<modelColorB>229</modelColorB>
+		<modelScale>0.2</modelScale>		
+	</questionNode>
+	<questionNode>
+		<question>Lee el diario.</question>
+		<yesAnswer>59</yesAnswer>
+		<noAnswer>41</noAnswer>
+		<iconPath>icons/Newspaper.png</iconPath>
+		<iconName>Newspaper</iconName>
+		<modelPath>objects/newspaper.3DS</modelPath>
+		<modelColorR>178</modelColorR>
+		<modelColorG>194</modelColorG>
+		<modelColorB>228</modelColorB>
+		<modelScale>1</modelScale>		
+	</questionNode>
+	<questionNode>
+		<question>Ha concurrido a exposiciones de arte.</question>
+		<yesAnswer>78</yesAnswer>
+		<noAnswer>22</noAnswer>
+		<iconPath>icons/Estatua.png</iconPath>
+		<iconName>Estatua</iconName>
+		<modelPath>objects/estatua.3DS</modelPath>
+		<modelColorR>201</modelColorR>
+		<modelColorG>211</modelColorG>
+		<modelColorB>203</modelColorB>
+		<modelScale>0.2</modelScale>		
+	</questionNode>
+</culturalSurvey>
